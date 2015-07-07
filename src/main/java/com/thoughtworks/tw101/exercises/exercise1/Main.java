@@ -4,6 +4,7 @@ package com.thoughtworks.tw101.exercises.exercise1;
 
 public class Main {
     public static void main(String[] args) {
-
+        OddNumbersAndSum x = new OddNumbersAndSum();
+        x.ToOneHundred();
     }
 }
