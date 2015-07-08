@@ -1,8 +1,5 @@
 package com.thoughtworks.tw101.exercises.exercise1;
 
-/**
- * Created by sclark01 on 7/7/15.
- */
 public class OddNumbersAndSum {
     public void ToOneHundred(){
         Integer sum = 0;
