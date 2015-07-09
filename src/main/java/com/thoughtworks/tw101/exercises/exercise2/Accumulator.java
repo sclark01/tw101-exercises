@@ -2,7 +2,7 @@ package com.thoughtworks.tw101.exercises.exercise2;
 
 public class Accumulator {
 
-    private Integer totalCalls = 0;
+    private int totalCalls = 0;
 
     public void increment() {
         totalCalls++;
