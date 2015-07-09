@@ -5,7 +5,7 @@ public class Accumulator {
     private Integer totalCalls = 0;
 
     public void increment() {
-        totalCalls += 1;
+        totalCalls++;
     }
 
     public void total() {
