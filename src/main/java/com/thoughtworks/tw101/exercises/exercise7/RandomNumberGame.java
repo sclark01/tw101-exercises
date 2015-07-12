@@ -2,11 +2,11 @@ package com.thoughtworks.tw101.exercises.exercise7;
 
 public class RandomNumberGame {
     private User user;
-    private final int numberToGuess;
+    private final int NUMBER_TO_GUESS;
 
     public RandomNumberGame(){
         user = new User();
-        numberToGuess = RandomNumberGenerator.randomNumberBetweenTwoValues(1, 100);
+        NUMBER_TO_GUESS = RandomNumberGenerator.randomNumberBetweenTwoValues(1, 100);
     }
 
     public void playGame() throws Exception {
@@ -22,7 +22,7 @@ public class RandomNumberGame {
     }
 
     private void coachUser() {
-        if(user.getGuess() > numberToGuess){
+        if(user.getGuess() > NUMBER_TO_GUESS){
             System.out.println("Try guessing a little lower!");
             return;
         }
@@ -30,7 +30,7 @@ public class RandomNumberGame {
     }
 
     private boolean checkForWin() {
-        if(user.getGuess() == numberToGuess){
+        if(user.getGuess() == NUMBER_TO_GUESS){
             return true;
         }
         return false;
