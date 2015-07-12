@@ -14,7 +14,6 @@ public class User {
     public void makeGuess() throws Exception{
         System.out.print("Enter your guess: ");
         String in = input.readLine();
-        System.out.println(in);
         currentGuess = Integer.parseInt(in);
     }
 
