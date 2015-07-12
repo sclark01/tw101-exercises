@@ -2,14 +2,14 @@ package com.thoughtworks.tw101.exercises.exercise7;
 
 public class RandomNumberGame {
     private User user;
-    private final int NUMBER_TO_GUESS;
+    private final int numberToGuess;
 
     public RandomNumberGame(){
         user = new User();
-        NUMBER_TO_GUESS = RandomNumberGenerator.randomNumberBetweenTwoValues(1, 100);
+        numberToGuess = RandomNumberGenerator.randomNumberBetweenTwoValues(1, 100);
     }
 
-    public void playGame(){
+    public void playGame() throws Exception {
         System.out.println("Welcome to the Random Number Game! Let's play!");
         while(true) {
             user.makeGuess();
@@ -22,7 +22,7 @@ public class RandomNumberGame {
     }
 
     private void coachUser() {
-        if(user.getGuess() > NUMBER_TO_GUESS){
+        if(user.getGuess() > numberToGuess){
             System.out.println("Try guessing a little lower!");
             return;
         }
@@ -30,7 +30,7 @@ public class RandomNumberGame {
     }
 
     private boolean checkForWin() {
-        if(user.getGuess() == NUMBER_TO_GUESS){
+        if(user.getGuess() == numberToGuess){
             return true;
         }
         return false;

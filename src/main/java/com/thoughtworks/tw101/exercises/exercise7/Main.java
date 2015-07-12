@@ -8,7 +8,11 @@ public class Main {
 
     public static void main(String[] args) {
         RandomNumberGame game = new RandomNumberGame();
-        game.playGame();
+        try {
+            game.playGame();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }

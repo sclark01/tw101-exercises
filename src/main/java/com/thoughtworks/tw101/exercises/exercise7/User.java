@@ -1,18 +1,21 @@
 package com.thoughtworks.tw101.exercises.exercise7;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class User {
     private int currentGuess;
-    private Scanner scanner;
+    private BufferedReader input;
 
     public User(){
-        scanner = new Scanner(System.in);
+        input = new BufferedReader(new InputStreamReader(System.in));
     }
 
-    public void makeGuess(){
+    public void makeGuess() throws Exception{
         System.out.print("Enter your guess: ");
-        currentGuess = scanner.nextInt();
+        String in = input.readLine();
+        System.out.println(in);
+        currentGuess = Integer.parseInt(in);
     }
 
     public int getGuess() {
