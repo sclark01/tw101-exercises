@@ -15,7 +15,7 @@ public class Node {
     }
 
     public void add(String nameOfNewNode) {
-        if (name.compareTo(nameOfNewNode) > 0){
+        if (name.toLowerCase().compareTo(nameOfNewNode.toLowerCase()) > 0){
             if(left == null){
                 left = new Node(nameOfNewNode);
             } else{
