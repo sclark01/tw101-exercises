@@ -1,5 +1,7 @@
 package com.thoughtworks.tw101.exercises.exercise8;
 
+import com.thoughtworks.tw101.exercises.exercise7.RandomNumberGenerator;
+
 public class RandomNumberGame {
     private User user;
     private final int NUMBER_TO_GUESS;
