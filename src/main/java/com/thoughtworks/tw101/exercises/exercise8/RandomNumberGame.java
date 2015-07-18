@@ -2,12 +2,15 @@ package com.thoughtworks.tw101.exercises.exercise8;
 
 import com.thoughtworks.tw101.exercises.exercise7.RandomNumberGenerator;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class RandomNumberGame {
     private UserThatStoresGuesses user;
     private final int NUMBER_TO_GUESS;
 
     public RandomNumberGame(){
-        user = new UserThatStoresGuesses();
+        user = new UserThatStoresGuesses(new BufferedReader(new InputStreamReader(System.in)));
         NUMBER_TO_GUESS = RandomNumberGenerator.randomNumberBetweenTwoValues(1, 100);
     }
 
