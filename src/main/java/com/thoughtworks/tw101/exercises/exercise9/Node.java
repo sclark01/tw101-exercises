@@ -23,7 +23,7 @@ public class Node {
             } else{
                 left.add(nameOfNewNode);
             }
-        } else{
+        } else {
             if(right == null){
                 right = new Node(nameOfNewNode);
             } else{

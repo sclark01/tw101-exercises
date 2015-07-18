@@ -12,7 +12,7 @@ public class User {
 
     public User(){
         input = new BufferedReader(new InputStreamReader(System.in));
-        guesses = new ArrayList();
+        guesses = new ArrayList<>();
     }
 
     public void makeGuess() {

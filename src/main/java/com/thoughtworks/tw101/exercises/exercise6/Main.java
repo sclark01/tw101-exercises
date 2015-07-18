@@ -19,7 +19,7 @@ public class Main {
     }
 
     private static void buildMonsterList() {
-        monsterList = new ArrayList();
+        monsterList = new ArrayList<>();
 
         for (int i = 0; i < 5; i++) {
             monsterList.add(i, new Troll(40, "Troll"));
