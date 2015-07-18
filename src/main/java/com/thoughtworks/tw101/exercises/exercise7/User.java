@@ -11,6 +11,10 @@ public class User {
         input = new BufferedReader(new InputStreamReader(System.in));
     }
 
+    public User(BufferedReader bufferedReader){
+        input = bufferedReader;
+    }
+
     public void makeGuess() throws Exception{
         System.out.print("Enter your guess: ");
         String in = input.readLine();

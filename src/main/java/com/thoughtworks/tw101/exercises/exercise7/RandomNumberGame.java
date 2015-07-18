@@ -1,11 +1,14 @@
 package com.thoughtworks.tw101.exercises.exercise7;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class RandomNumberGame {
     private User user;
     private final int NUMBER_TO_GUESS;
 
     public RandomNumberGame(){
-        user = new User();
+        user = new User(new BufferedReader(new InputStreamReader(System.in)));
         NUMBER_TO_GUESS = RandomNumberGenerator.randomNumberBetweenTwoValues(1, 100);
     }
 
