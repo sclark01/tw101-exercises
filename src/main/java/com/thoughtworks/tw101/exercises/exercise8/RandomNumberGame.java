@@ -6,7 +6,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class RandomNumberGame {
-    private UserThatStoresGuesses user;
+    protected UserThatStoresGuesses user;
     private final int NUMBER_TO_GUESS;
 
     public RandomNumberGame(){

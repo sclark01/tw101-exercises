@@ -4,8 +4,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class RandomNumberGame {
-    private User user;
-    private final int NUMBER_TO_GUESS;
+    protected User user;
+    protected final int NUMBER_TO_GUESS;
 
     public RandomNumberGame(){
         user = new User(new BufferedReader(new InputStreamReader(System.in)));

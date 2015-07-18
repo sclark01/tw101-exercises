@@ -2,19 +2,18 @@ package com.thoughtworks.tw101.exercises.exercise8;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class UserThatStoresGuesses extends com.thoughtworks.tw101.exercises.exercise7.User{
     private ArrayList<Integer> guesses;
 
     public UserThatStoresGuesses(){
-        input = new BufferedReader(new InputStreamReader(System.in));
+        super();
         guesses = new ArrayList<>();
     }
 
     public UserThatStoresGuesses(BufferedReader bufferedReader){
-        input = bufferedReader;
+        super(bufferedReader);
         guesses = new ArrayList<>();
     }
 
