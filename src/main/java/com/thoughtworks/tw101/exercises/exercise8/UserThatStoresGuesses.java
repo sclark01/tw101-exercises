@@ -5,16 +5,20 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class User {
-    private int currentGuess;
-    private BufferedReader input;
+public class UserThatStoresGuesses extends com.thoughtworks.tw101.exercises.exercise7.User{
     private ArrayList<Integer> guesses;
 
-    public User(){
+    public UserThatStoresGuesses(){
         input = new BufferedReader(new InputStreamReader(System.in));
         guesses = new ArrayList<>();
     }
 
+    public UserThatStoresGuesses(BufferedReader bufferedReader){
+        input = bufferedReader;
+        guesses = new ArrayList<>();
+    }
+
+    @Override
     public void makeGuess() {
         while(true) {
             System.out.print("Enter your guess: ");
@@ -33,11 +37,6 @@ public class User {
             }
         }
     }
-
-    public int getGuess() {
-        return currentGuess;
-    }
-
     public void printGuesses() {
         for(Integer guess : guesses){
             System.out.print(guess + " ");

@@ -3,11 +3,11 @@ package com.thoughtworks.tw101.exercises.exercise8;
 import com.thoughtworks.tw101.exercises.exercise7.RandomNumberGenerator;
 
 public class RandomNumberGame {
-    private User user;
+    private UserThatStoresGuesses user;
     private final int NUMBER_TO_GUESS;
 
     public RandomNumberGame(){
-        user = new User();
+        user = new UserThatStoresGuesses();
         NUMBER_TO_GUESS = RandomNumberGenerator.randomNumberBetweenTwoValues(1, 100);
     }
 

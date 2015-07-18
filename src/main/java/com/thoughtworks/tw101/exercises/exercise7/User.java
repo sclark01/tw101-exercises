@@ -4,8 +4,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class User {
-    private int currentGuess;
-    private BufferedReader input;
+    protected int currentGuess;
+    protected BufferedReader input;
 
     public User(){
         input = new BufferedReader(new InputStreamReader(System.in));
