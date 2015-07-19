@@ -3,7 +3,8 @@ package com.thoughtworks.tw101.introductory_programming_exercises;
 public class DiamondExercises {
     public static void main(String[] args) {
         drawAnIsoscelesTriangle(3);
-        drawADiamond(8);
+        drawInversedIsoscelesTriangle(3);
+        drawADiamond(3);
         drawADiamondWithYourName(3);
     }
 
@@ -27,13 +28,13 @@ public class DiamondExercises {
 
     private static void drawInversedIsoscelesTriangle(int n) {
         if(n < 1) return;
-        int level = 1;
-        int spaces = n - 1;
+        int level = n + 2;
+        int spaces = n;
 
-        for (int i = 0; i < n; i++) {
+        for (int i = n; i > 0; i--) {
             addSpaces(spaces - i);
             printAsterisks(level);
-            level += 2;
+            level -= 2;
             System.out.println("");
         }
     }
@@ -58,14 +59,8 @@ public class DiamondExercises {
 //             ***
 //              *
     private static void drawADiamond(int n) {
-        int spaces = n, level = n;
         drawAnIsoscelesTriangle(n);
-        for (int i = n - 1; i > 0; i--) {
-            addSpaces(spaces - i);
-            printAsterisks(level);
-            level -= 2;
-            System.out.println("");
-        }
+        drawInversedIsoscelesTriangle(n);
     }
 
 //    Diamond with Name
