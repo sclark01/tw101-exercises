@@ -13,10 +13,44 @@ public class DiamondExercises {
 //             ***
 //            *****
     private static void drawAnIsoscelesTriangle(int n) {
+        if(n < 1) return;
+        int level = 1;
+        int spaces = n - 1;
 
+        for (int i = 0; i < n; i++) {
+            addSpaces(spaces - i);
+            printAsterisks(level);
+            level += 2;
+            System.out.println("");
+        }
     }
 
-//    Diamond
+    private static void drawInversedIsoscelesTriangle(int n) {
+        if(n < 1) return;
+        int level = 1;
+        int spaces = n - 1;
+
+        for (int i = 0; i < n; i++) {
+            addSpaces(spaces - i);
+            printAsterisks(level);
+            level += 2;
+            System.out.println("");
+        }
+    }
+
+    private static void printAsterisks(int level) {
+        for (int j = 0; j < level; j++) {
+            System.out.print("*");
+        }
+    }
+
+    private static void addSpaces(int spaces) {
+        for (int k = spaces; k > 0; k--) {
+            System.out.print(" ");
+        }
+    }
+
+    //    Diamond
 //    Given a number n, print a centered diamond. Example for n=3:
 //              *
 //             ***
@@ -24,7 +58,14 @@ public class DiamondExercises {
 //             ***
 //              *
     private static void drawADiamond(int n) {
-
+        int spaces = n, level = n;
+        drawAnIsoscelesTriangle(n);
+        for (int i = n - 1; i > 0; i--) {
+            addSpaces(spaces - i);
+            printAsterisks(level);
+            level -= 2;
+            System.out.println("");
+        }
     }
 
 //    Diamond with Name
