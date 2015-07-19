@@ -27,25 +27,25 @@ public class DiamondExercises {
 
     private static void drawInvertedIsoscelesTriangle(int n) {
         if(n < 1) return;
-        int level = n + (n - 1);
-        int spaces = n + 1;
+        int numberOfAsterisks = n + (n - 1);
+        int numberOfSpaces = n + 1;
 
         for (int i = n; i > 0; i--) {
-            addSpaces(spaces - i);
-            printAsterisks(level);
-            level -= 2;
+            addSpaces(numberOfSpaces - i);
+            printAsterisks(numberOfAsterisks);
+            numberOfAsterisks -= 2;
             System.out.println("");
         }
     }
 
     private static void printAsterisks(int level) {
-        for (int j = 0; j < level; j++) {
+        for (int i = 0; i < level; i++) {
             System.out.print("*");
         }
     }
 
     private static void addSpaces(int spaces) {
-        for (int k = spaces; k > 0; k--) {
+        for (int i = 0; i < spaces; i++) {
             System.out.print(" ");
         }
     }
