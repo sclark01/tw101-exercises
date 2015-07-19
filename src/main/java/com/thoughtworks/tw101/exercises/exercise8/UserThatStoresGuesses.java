@@ -7,11 +7,6 @@ import java.util.ArrayList;
 public class UserThatStoresGuesses extends com.thoughtworks.tw101.exercises.exercise7.User{
     private ArrayList<Integer> guesses;
 
-    public UserThatStoresGuesses(){
-        super();
-        guesses = new ArrayList<>();
-    }
-
     public UserThatStoresGuesses(BufferedReader bufferedReader){
         super(bufferedReader);
         guesses = new ArrayList<>();
