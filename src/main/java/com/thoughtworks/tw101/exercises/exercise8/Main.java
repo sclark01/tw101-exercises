@@ -6,7 +6,7 @@ package com.thoughtworks.tw101.exercises.exercise8;
 
 public class Main {
     public static void main(String[] args) {
-        RandomNumberGame game = new RandomNumberGame();
+        RandomNumberGameWithUserThatStores game = new RandomNumberGameWithUserThatStores();
         game.playGame();
     }
 }
