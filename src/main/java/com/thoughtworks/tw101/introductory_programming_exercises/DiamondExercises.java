@@ -4,7 +4,7 @@ public class DiamondExercises {
     public static void main(String[] args) {
         drawAnIsoscelesTriangle(3);
         drawADiamond(8);
-//        drawADiamondWithYourName(3);
+        drawADiamondWithYourName(3);
     }
 
 //    Isosceles Triangle
@@ -18,34 +18,34 @@ public class DiamondExercises {
         int numberOfSpaces = n - 1;
 
         for (int i = 0; i < n; i++) {
-            addSpaces(numberOfSpaces - i);
+            printSpaces(numberOfSpaces - i);
             printAsterisks(numberOfAsterisks);
             numberOfAsterisks += 2;
             System.out.println("");
         }
     }
 
-    private static void drawInvertedIsoscelesTriangle(int n) {
+    private static void drawInvertedIsoscelesTriangle(int n, int startTriangleXSpacesToTheRight) {
         if(n < 1) return;
         int numberOfAsterisks = n + (n - 1);
-        int numberOfSpaces = n + 1;
+        int numberOfSpaces = n + startTriangleXSpacesToTheRight;
 
         for (int i = n; i > 0; i--) {
-            addSpaces(numberOfSpaces - i);
+            printSpaces(numberOfSpaces - i);
             printAsterisks(numberOfAsterisks);
             numberOfAsterisks -= 2;
             System.out.println("");
         }
     }
 
-    private static void printAsterisks(int level) {
-        for (int i = 0; i < level; i++) {
+    private static void printAsterisks(int numberToPrint) {
+        for (int i = 0; i < numberToPrint; i++) {
             System.out.print("*");
         }
     }
 
-    private static void addSpaces(int spaces) {
-        for (int i = 0; i < spaces; i++) {
+    private static void printSpaces(int numberToPrint) {
+        for (int i = 0; i < numberToPrint; i++) {
             System.out.print(" ");
         }
     }
@@ -59,7 +59,7 @@ public class DiamondExercises {
 //              *
     private static void drawADiamond(int n) {
         drawAnIsoscelesTriangle(n);
-        drawInvertedIsoscelesTriangle(n - 1);
+        drawInvertedIsoscelesTriangle(n - 1, 1);
     }
 
 //    Diamond with Name
@@ -71,6 +71,8 @@ public class DiamondExercises {
 //            ***
 //             *
     private static void drawADiamondWithYourName(int n) {
-
+        drawAnIsoscelesTriangle(n - 1);
+        System.out.println("Shea");
+        drawInvertedIsoscelesTriangle(n - 1, 0);
     }
 }

@@ -12,14 +12,22 @@ public class TriangleExercises {
 //    Print one asterisk to the console.
 //    Example: *
     private static void drawAnAsterisk() {
-
+        printAsterisks(1);
+        System.out.println();
     }
 
-//    Draw a horizontal line
+    private static void printAsterisks(int numberToPrint) {
+        for (int i = 0; i < numberToPrint; i++) {
+            System.out.print("*");
+        }
+    }
+
+    //    Draw a horizontal line
 //    Given a number n, print n asterisks on one line.
 //    Example when n=8:  ********
     private static void drawAHorizontalLine(int n) {
-
+        printAsterisks(n);
+        System.out.println();
     }
 
 //    Draw a vertical line
@@ -29,7 +37,10 @@ public class TriangleExercises {
 //            *
 //            *
     private static void drawAVerticalLine(int n) {
-
+        for (int i = 0; i < n; i++) {
+            printAsterisks(1);
+            System.out.println();
+        }
     }
 
 //    Draw a right triangle
@@ -39,6 +50,9 @@ public class TriangleExercises {
 //            **
 //            ***
     private static void drawARightTriangle(int n) {
-
+        for (int i = 1; i <= n; i++) {
+            printAsterisks(i);
+            System.out.println();
+        }
     }
 }
