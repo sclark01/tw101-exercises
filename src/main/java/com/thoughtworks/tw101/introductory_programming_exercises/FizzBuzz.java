@@ -27,11 +27,27 @@ package com.thoughtworks.tw101.introductory_programming_exercises;
 //        FizzBuzz
 
 public class FizzBuzz {
+    private static final int UPPER_LIMIT = 100;
     public static void main(String[] args) {
         fizzBuzz();
     }
 
     private static void fizzBuzz() {
-
+        Boolean didFizzOrBuzz;
+        for (int i = 1; i <= UPPER_LIMIT; i++) {
+            didFizzOrBuzz = false;
+            if(i % 3 == 0){
+                System.out.print("Fizz");
+                didFizzOrBuzz = true;
+            }
+            if(i % 5 == 0){
+                System.out.print("Buzz");
+                didFizzOrBuzz = true;
+            }
+            if(!didFizzOrBuzz){
+                System.out.print(i);
+            }
+            System.out.println();
+        }
     }
 }
