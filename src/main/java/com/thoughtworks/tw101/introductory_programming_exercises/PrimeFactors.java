@@ -11,13 +11,18 @@ import java.util.List;
 
 public class PrimeFactors {
     public static void main(String[] args) {
-        List<Integer> primeFactors = generate(1000000);
+        List<Integer> primeFactors = generate(30);
         printList(primeFactors);
     }
 
     private static List<Integer> generate(int n) {
         List<Integer> factors = new ArrayList<>();
         if(n % 2 == 0) factors.add(2);
+        checkAndAddOddFactors(n, factors);
+        return factors;
+    }
+
+    private static void checkAndAddOddFactors(int n, List<Integer> factors) {
         for (int i = 1; i <= n; i += 2) {
             if(n % i == 0){
                 if(isPrime(i)) {
@@ -25,7 +30,6 @@ public class PrimeFactors {
                 }
             }
         }
-        return factors;
     }
 
     private static void printList(List<Integer> lst){
