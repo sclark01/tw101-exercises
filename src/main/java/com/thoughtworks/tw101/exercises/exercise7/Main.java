@@ -11,7 +11,7 @@ public class Main {
         try {
             game.playGame();
         } catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace(System.err);
         }
     }
 
