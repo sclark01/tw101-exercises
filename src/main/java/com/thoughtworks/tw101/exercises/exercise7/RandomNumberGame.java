@@ -12,6 +12,11 @@ public class RandomNumberGame {
         NUMBER_TO_GUESS = RandomNumberGenerator.randomNumberBetweenTwoValues(1, 100);
     }
 
+    public RandomNumberGame(User user){
+        this.user = user;
+        NUMBER_TO_GUESS = RandomNumberGenerator.randomNumberBetweenTwoValues(1, 100);
+    }
+
     public void playGame() throws Exception {
         System.out.println("Welcome to the Random Number Game! Let's play!");
         while(true) {

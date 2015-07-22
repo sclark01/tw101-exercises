@@ -12,12 +12,9 @@ public class Library {
     }
 
     public String printBooksContaining(String partialBookTitle) {
-        int len = books.length;
-        String book;
-        for (int i = 0; i < len; i++) {
-            book = books[i].toLowerCase();
-            if(book.contains(partialBookTitle.toLowerCase())){
-                printStream.println(books[i]);
+        for(String book : books){
+            if(book.toLowerCase().contains(partialBookTitle.toLowerCase())){
+                printStream.println(book);
             }
         }
         return null;

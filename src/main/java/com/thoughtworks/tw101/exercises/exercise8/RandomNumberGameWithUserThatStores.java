@@ -1,12 +1,13 @@
 package com.thoughtworks.tw101.exercises.exercise8;
 
+import com.thoughtworks.tw101.exercises.exercise7.RandomNumberGame;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class RandomNumberGameWithUserThatStores extends com.thoughtworks.tw101.exercises.exercise7.RandomNumberGame{
+public class RandomNumberGameWithUserThatStores extends RandomNumberGame{
     public RandomNumberGameWithUserThatStores(){
-        super();
-        user = new UserThatStoresGuesses(new BufferedReader((new InputStreamReader(System.in))));
+        super(new UserThatStoresGuesses(new BufferedReader((new InputStreamReader(System.in)))));
     }
     @Override
     public void playGame(){

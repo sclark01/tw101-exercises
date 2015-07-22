@@ -1,10 +1,12 @@
 package com.thoughtworks.tw101.exercises.exercise8;
 
+import com.thoughtworks.tw101.exercises.exercise7.User;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class UserThatStoresGuesses extends com.thoughtworks.tw101.exercises.exercise7.User{
+public class UserThatStoresGuesses extends User{
     private ArrayList<Integer> guesses;
 
     public UserThatStoresGuesses(BufferedReader bufferedReader){

@@ -47,4 +47,8 @@ public class Node {
             right.buildNameList(names);
         }
     }
+
+    public static int getNumberOfEntries() {
+        return numberOfEntries;
+    }
 }
