@@ -16,17 +16,7 @@ public class Orc implements Monster{
     }
 
     @Override
-    public String name() {
-        return name;
-    }
-
-    @Override
-    public int currentHitPoints() {
-        return damage;
-    }
-
-    @Override
     public void reportStatus() {
-        System.out.println("Name: " + this.name() + " Hits: " + this.currentHitPoints());
+        System.out.println("Name: " + this.name + " Hits: " + this.damage);
     }
 }
