@@ -7,11 +7,10 @@ public class Node {
     private String name;
     private Node left;
     private Node right;
-    private static int numberOfEntries = 0;
+
 
     public Node(String name) {
         this.name = name;
-        numberOfEntries++;
         left = null;
         right = null;
     }
@@ -46,9 +45,5 @@ public class Node {
         if (right != null) {
             right.buildNameList(names);
         }
-    }
-
-    public static int getNumberOfEntries() {
-        return numberOfEntries;
     }
 }
