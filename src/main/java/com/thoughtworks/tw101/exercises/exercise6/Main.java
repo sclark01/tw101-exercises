@@ -22,8 +22,8 @@ public class Main {
         monsterList = new ArrayList<>();
 
         for (int i = 0; i < 5; i++) {
-            monsterList.add(i, new Troll(40, "Troll"));
-            monsterList.add(++i, new Orc(20, "Orc"));
+            monsterList.add(new Troll(40, "Troll"));
+            monsterList.add(new Orc(20, "Orc"));
         }
     }
     private static void damageMonsters() {
